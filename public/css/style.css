@@ -1,0 +1,158 @@
+body{
+    margin:0px 0px;
+  	background-size:cover;
+  	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+}
+
+
+/*  _____________ main page structure _____________  */
+
+.container { 
+	display: flex;
+  	flex: 1;
+}
+
+.content{
+	/*background-color: rgba(255, 255, 255, .2);*/
+	display: flex;
+	flex: 1;
+}
+
+.outLeft {
+	height: 100vh;
+	width: 200px;
+	display: flex;
+  	align-items: center;
+  	/*float:left;*/
+  	order: -1;
+}
+#in_left_menu {
+	background-color: rgba(88, 2, 2, .9);
+	height: 100px;
+	width: 100px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	float:left;
+}
+#in_left_logo {
+	border-style: solid;
+	border-width: 2px;
+    /*border-color: rgba(255, 255, 255, .3);*/
+    border-color: rgba(88, 2, 2, .9);
+    background: url(/img/logo_w.png) center no-repeat;
+	height: 96px;
+	width: 96px;
+	float:right;
+}
+.outRight {
+	height: 100vh;
+	width: 50px;
+	display: flex;
+  	align-items: center;
+}
+#in_right_menu {
+	background-color: rgba(88, 2, 2, .9);
+	height: 100px;
+	width: 50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/*  _____________ fonts _____________  */
+
+/* Vino font - font-family: 'Cinzel', serif; font-weght: 700;*/
+/* Vitae font - font-family: 'Satisfy', cursive; */
+
+h1 {
+	font-family: 'Cinzel', serif; 
+	font-size: 70px;
+	font-weight: 400;
+	color: rgb(255, 255, 255);
+	display: inline;
+}
+h2 {
+	font-family: 'Satisfy', cursive; 
+	font-size: 90px;
+	font-weight: 400;
+	color: rgb(255, 255, 255);
+	display: inline;
+}
+h3 {
+	font-family: 'Josefin Slab', serif; 
+	font-size: 20px;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing: 20px;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	color: rgb(255, 255, 255);
+}
+h4 {
+	font-family: 'Josefin Slab', serif; 
+	font-size: 36px;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	text-align: right;
+	color: rgb(255, 255, 255);
+}
+
+/*  _____________ body divs _____________  */
+
+/*  . . .  home  . . .  */
+#home_mark {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	/*width: 100%;*/
+	margin-left: 30%;
+}
+#welcome {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position: absolute;
+	margin-top: 22%;
+	margin-left: 1%;
+}
+#type {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	bottom: 0;
+}
+
+/*  . . .  how  . . .  */
+#how_header {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position: absolute;
+	margin-top: 4%;
+	margin-left: 65%;
+	line-height: 220%;
+}
+#how_body {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-left: 30%;
+}
+#how_copy{
+	background-color: rgba(255, 255, 255,.8);
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 300px;
+	height: 300px;
+	margin-left: 30%;
+}
+
+
+

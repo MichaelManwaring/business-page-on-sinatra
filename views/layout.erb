@@ -2,8 +2,29 @@
 <html>
 	<head>
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Montez|Mr+Dafoe|IM+Fell+Double+Pica+SC|Mrs+Sheppards|Cinzel:400,700|Satisfy|Josefin+Slab:400,400italic,600italic' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/formVerification.js"></script>
 	</head>
 	<body>
-
+	<%
+		nav = ["Enjoy", "Share", "How it Works", "Cellar", "Contact Us"] 
+		pages = ["enjoy", "share", "how", "cellar", "contact"] 
+	%>
+	<div class="container">
+	    	<main class="content">
+				<!-- start ruby -->
+					<%= yield %>	
+				<!-- end ruby -->
+		    </main>
+	    <aside class="outLeft">
+	      <div id="in_left_menu"><img src="/img/cscrew_r.svg"></div>
+	      <div id="in_left_logo"></div>
+	    </aside>
+	    <aside class="outRight">
+	      <div id="in_right_menu"><img src="/img/pen_r.svg"></div>
+	    </aside>
+	</div>
 	</body>
 </html>
