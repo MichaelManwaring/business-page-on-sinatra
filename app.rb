@@ -33,8 +33,31 @@ get '/contact' do
 	erb :contact
 end
 
+
+get "/gallery" do
+	erb :gallery
+end
+
+
+
 get "/signup" do
 	@gift="off"
+	erb :signup
+end
+post "/red" do
+	@type="Red"
+	erb :signup
+end
+post "/white" do
+	@type="White"
+	erb :signup
+end
+post "/sparkling" do
+	@type="Sparkling"
+	erb :signup
+end
+post "/chairmans" do
+	@type="Chairman's Select Mix"
 	erb :signup
 end
 
@@ -80,7 +103,7 @@ post "/signup" do
 	 	@gstate=@gstate[1,2]
 	 	m.subject = 'Welcome to VinoVitae!'
 	 	m.text = 'Dear '+@name+',
-	 	Thanks for joining VinoVitae, your first delivery should arrive soon!
+	 	Thanks for joining VinoVitae, your first '+@type+' delivery should arrive soon!
 
 	 	Please verify this account information: 
 	 	Billing:
@@ -101,7 +124,7 @@ post "/signup" do
 	 	@state=@state[1,2]
 	 	m.subject = 'Welcome to VinoVitae!'
 	 	m.text = 'Dear '+@name+',
-	 	Thanks for joining VinoVitae, your [insert subscription type here] delivery should arrive soon!
+	 	Thanks for joining VinoVitae, your '+@type+' delivery should arrive soon!
 
 	 	Please verify this account information: 
 	 	'+@name+'

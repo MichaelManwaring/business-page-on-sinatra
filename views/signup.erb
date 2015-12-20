@@ -1,34 +1,35 @@
 
 
-<div class="page_body"id="how_body">
-	<div class="copy" id="how_copy">
+<div class="page_body"id="si_body">
+	<div class="copy" id="si_copy">
 <form method="POST" action="/signup" id="wineform">
 <!-- user params section -->
 	<span id="validform"></span>
-	<div>
-		Account Information
+	<div id="account" class="form_box">
+		<h3>Account Information</h3>
 		<label for="email">Email</label>
 		<input type="email" name="email">
+		<br>
+		<br>
 		<label for="password">Password</label>
 		<input type="password" name="password" id="password" class="password">
 		<label for="password2">Confirm Password</label>
 		<input type="password" name="password2" id="password2" class="password">
 <!-- check for matching password-->
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	
-	<div>
-		Billing Information
+	<div id="billing" class="form_box">
+		<h3>Billing Information</h3>
 <!-- Self Recipient info section -->
 		<label for="name">Name</label>
 		<input type="text" name="name">
+		<br>
+		<br>
 		<label for="address1">Address line 1</label>
 		<input type="text" name="address1">
 		<label for="address2">Address line 2</label>
 		<input type="text" name="address2">
+		<br>
+		<br>
 		<label for="city">City</label>
 		<input type="text" name="city">
 		<label for="state">State</label>
@@ -86,30 +87,35 @@
 			<option value="WI">Wisconsin</option>
 			<option value="WY">Wyoming</option>
 		</select>
-	<!-- RUBY check for legal state -->
+		<!-- RUBY check for legal state -->
 		<label for="zip">Zip-Code</label>
 		<input type="text" name="zip">
+		<br>
+		<br>
 		<label for="birthdate">Date of Birth</label>
 		<input type="date" name="birthdate" id="birthdate">
-	<!-- check for legal age-->
+		<!-- check for legal age-->
 	</div>
-	<br>
-	<br>
 
-<!-- Gift toggle -->
+<!-- Gift/shipping toggle -->
+	<div id="shipping_toggle" class="form_box">
 	<label for="gift">Is this a gift? or being sent to an address different than your billing?</label>
 	<input type="checkbox" name="gift" id="gift">
+	</div>
 <!-- Gift Recipient section -->
-	<br>
-	<br>
-	<br>
-	<div id="shipping">Shipping Information
+	
+	<div id="shipping" class="form_box">
+		<h3>Shipping Information</h3>
 		<label for="gname">Recipient Name</label>
 		<input type="text" name="gname">
+		<br>
+		<br>
 		<label for="gaddress1">Address line 1</label>
 		<input type="text" name="gaddress1">
 		<label for="gaddress2">Address line 2</label>
 		<input type="text" name="gaddress2">
+		<br>
+		<br>
 		<label for="gcity">City</label>
 		<input type="text" name="gcity">
 		<select id="gstate" name="gstate" form="wineform">
@@ -170,8 +176,8 @@
 		<label for="gzip">Zip-Code</label>
 		<input type="text" name="gzip">
 	</div>
-	<div>
-		<input type="submit">
+	<div id="submit" class="form_box">
+		<input id="submit_button" type="submit">
 	</div>
 </form>
 </div>
