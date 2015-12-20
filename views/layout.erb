@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
-		<link href='https://fonts.googleapis.com/css?family=Montez|Mr+Dafoe|IM+Fell+Double+Pica+SC|Mrs+Sheppards|Cinzel:400,700|Satisfy|Josefin+Slab:400,400italic,600italic' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script type="text/javascript" src="js/formVerification.js"></script>
-	</head>
-	<body>
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title><%= @title %></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/vino.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Montez|Mr+Dafoe|IM+Fell+Double+Pica+SC|Mrs+Sheppards|Cinzel:400,700|Satisfy|Josefin+Slab:400,400italic,600italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
 	<%
 		nav = ["Enjoy", "Share", "How it Works", "Cellar", "Contact Us"] 
 		pages = ["enjoy", "share", "how", "cellar", "contact"] 
@@ -19,12 +21,27 @@
 				<!-- end ruby -->
 		    </main>
 	    <aside class="outLeft">
-	      <div id="in_left_menu"><img src="/img/cscrew_r.svg"></div>
-	      <div id="in_left_logo"></div>
+	      <div class="in_left_menu"><input type='image' class='left-menu' id='clickl' img src="/img/cscrew_r.svg">
+	      </div>
+		       	<div class="left_mainmenu">
+	    			<ul class="nav">
+				      <li><a href="/enjoy">Frunesco</a></li>
+				      <li><a href="/share">Pars</a></li>
+				      <li><a href="/how">Operibus</a></li>
+				      <li><a href="/cellar">Cellarium</a></li>
+				      <li><a href="/contact">Loqui</a></li>
+				    </ul>
+	    		</div>
+	      <a href='/'><div id="in_left_logo"></div></a>
 	    </aside>
 	    <aside class="outRight">
-	      <div id="in_right_menu"><img src="/img/pen_r.svg"></div>
+	      <div id="in_right_menu"><input type='image' class='right-menu' id='clickr' img src="/img/pen_r.svg"></div>
+	      		<div class="right_signin">
+	    			<p>Username:<input id='signin-field' type="text" name="username"></p>
+	    			<p>Password:<input id='signin-field' type="text" name="password"></p>
+	    			<p><a href=# class='signin_butt' data-text-swap="Thank you!">Sign In</a></p>
+	    		</div>
 	    </aside>
 	</div>
-	</body>
+</body>
 </html>
