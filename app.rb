@@ -70,17 +70,17 @@ post "/signup" do
 	 if @state[0]=="x" && @gstate[0]=="x" 
 	 	@state=@state[1,2]
 	 	@gstate=@gstate[1,2]
-	 	m.subject = 'Wine of the Month'
+	 	m.subject = 'VinoVitae'
 	 	m.text = 'Dear '+@name+',
-	 	We at Wine of the Month are sad to inform you that the liquor laws in your state do not permit alchohol shipments of this kind. If you would still like to try our selection, you might consider getting this subsription as a gift for a friend in a different state.
+	 	We at VinoVitae are sad to inform you that the liquor laws in your state do not permit alchohol shipments of this kind. If you would still like to try our selection, you might consider getting this subsription as a gift for a friend in a different state.
 	 	Thanks,
-	 	Wine of the Month Team'	
+	 	The VinoVitae Team'	
 	 elsif @gift == "on"
 	 	@state=@state[1,2]
 	 	@gstate=@gstate[1,2]
-	 	m.subject = 'Welcome to Wine of the Month!'
+	 	m.subject = 'Welcome to VinoVitae!'
 	 	m.text = 'Dear '+@name+',
-	 	Thanks for joining Wine of the Month, your [insert subscription type here] delivery should arrive soon!
+	 	Thanks for joining VinoVitae, your first delivery should arrive soon!
 
 	 	Please verify this account information: 
 	 	Billing:
@@ -99,9 +99,9 @@ post "/signup" do
 	 	Wine of the Month Team'
 	 else	 	
 	 	@state=@state[1,2]
-	 	m.subject = 'Welcome to Wine of the Month!'
+	 	m.subject = 'Welcome to VinoVitae!'
 	 	m.text = 'Dear '+@name+',
-	 	Thanks for joining Wine of the Month, your [insert subscription type here] delivery should arrive soon!
+	 	Thanks for joining VinoVitae, your [insert subscription type here] delivery should arrive soon!
 
 	 	Please verify this account information: 
 	 	'+@name+'
@@ -120,12 +120,3 @@ post "/signup" do
 	erb :signup
 end
 
-# mail = SendGrid::Mail.new do |m|
-#  m.to = 'michael.c.manwaring@gmail.com'
-#  m.from = 'michael.c.manwaring@gmail.com'
-#  m.subject = 'test!'
-#  m.text = 'Check this out, bro!'
-# end
-# res = client.send(mail)
-# puts res.code
-# puts res.body
