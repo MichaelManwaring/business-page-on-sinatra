@@ -40,11 +40,11 @@ $(function() {
   $("#clickr").click(function() {
     if (y == 0) {
     	$(".right-menu").toggleClass("signinicon-animate");
-      	$(".right_signin").animate({"right": '+=60%'}, 'slow');
+      	$(".right_signin").animate({"right": '+=45%'}, 'slow');
       	y = 1;
     } else {
     	$(".right-menu").toggleClass("signinicon-reanimate");
-      	$(".right_signin").animate({"right": '-=60%'}, 'slow');
+      	$(".right_signin").animate({"right": '-=45%'}, 'slow');
       	y = 0;
     }
   });
@@ -59,13 +59,24 @@ $(".signin_butt").on("click", function() {
   }
   	$(".right-menu").toggleClass("signinicon-reanimate");
     if (y == 0) {
-      $(".right_signin").delay(1000).animate({"right": '+=60%'}, 'slow');
+      $(".right_signin").delay(1000).animate({"right": '+=45%'}, 'slow');
       y = 1;
     } else {
-      $(".right_signin").delay(1000).animate({"right": '-=60%'}, 'slow');
+      $(".right_signin").delay(1000).animate({"right": '-=45%'}, 'slow');
       y = 0;
     }
   });
 });
+
+$(".menu_lk").hover(function() {
+  var el = $(this);
+  if (el.text() == el.data("text-swap")) {
+    el.text(el.data("text-original"));
+  } else {
+    el.data("text-original", el.text());
+    el.text(el.data("text-swap"));
+  }
+});
+
 
 });
