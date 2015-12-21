@@ -409,5 +409,48 @@ h4 {
 	margin-left: 300px;
 }
 
+#wineform{
+	font-family: 'Josefin Slab', serif; 
+	font-size: 15px;
+	font-weight: 600;
+	font-style: italic;
+	/*letter-spacing: 20px;*/
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	color: rgb(255, 255, 255);
+}
 
+#sommelier{
+	width: 90%;
+	margin: 5%;
+}
+.form_box{
+	border: 2px white;
+	padding: 2%;
+}
+#billing{
+	text-align: left;
+	float: left;
+}
+#shipping_toggle{
+	text-align: left;
+	float: left;
+	clear: left;
+}
+#shipping{
+	text-align: left;
+	float: left;
+}
+#submit{
+	text-align: right;
+	float: right;
+	clear: right;
+}
+#submit_button{
+	border-radius: 5px;
+	font-size: 2em
+	font-family: 'Josefin Slab', serif; 
+	font-weight: 600;
+	padding: 1em;
+}
 
