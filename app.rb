@@ -32,6 +32,23 @@ get '/contact' do
 	erb :contact
 end
 
+post '/contact' do
+	puts "my params are" + params.inspect
+	@comment = params['comment']
+	@cemail = params['cemail']
+	puts =@cemail
+	mail = SendGrid::Mail.new do |m|
+	 m.to = 'michael.c.manwaring@gmail.com'
+	 m.from = @cemail
+	 m.subject = 'VinoVitae!'
+	 m.text = @comment
+	end
+	res = client.send(mail)
+	puts res.code
+	puts res.body
+	@title = "Loqui  .  VinoVitae"
+	erb :contact
+end
 
 get "/gallery" do
 	erb :gallery
@@ -51,10 +68,12 @@ post "/white" do
 	@type="White"
 	erb :signup
 end
+
 post "/sparkling" do
 	@type="Sparkling"
 	erb :signup
 end
+
 post "/chairmans" do
 	@type="Chairman's Select Mix"
 	erb :signup
@@ -123,7 +142,7 @@ post "/signup" do
 	 	@state=@state[1,2]
 	 	m.subject = 'Welcome to VinoVitae!'
 	 	m.text = 'Dear '+@name+',
-	 	Thanks for joining VinoVitae, your '+@type+' delivery should arrive soon!
+	 	Thanks for joining VinoVitae, your first '+@type+' delivery should arrive soon!
 
 	 	Please verify this account information: 
 	 	'+@name+'
@@ -138,6 +157,5 @@ post "/signup" do
 	res = client.send(mail)
 	puts res.code
 	puts res.body
-	puts @gift
 	erb :signup
 end
