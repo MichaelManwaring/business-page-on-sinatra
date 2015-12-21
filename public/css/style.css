@@ -1,3 +1,7 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body{
     margin:0px 0px;
   	background-size:cover;
@@ -69,6 +73,19 @@ body{
 	align-items:center;
 	z-index: 4;
 }
+.unpw {
+    /*border-radius: 0px 0px 10px 10px;*/
+    width: 240px;
+    height: 40px; 
+	display:flex;
+	justify-content:center;
+	align-items:center;
+    background-color: rgba(88, 2, 2, .8);
+    position: absolute;
+	/*z-index:9;*/
+	margin-top: 0px;
+	margin-left: 900px;
+}
 
 /*  _____________ fonts _____________  */
 
@@ -122,7 +139,29 @@ h4 {
 	letter-spacing: 1px;
 	color: rgb(255, 255, 255);
 }
-
+#how_blurb h2 {
+	font-family: 'Josefin Slab', serif;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 1.3;
+	color: rgb(196, 0, 27);
+}
+#how_blurb p {
+	font-family: 'Josefin Slab', serif;
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 600;
+	color: rgb(46, 0, 6);
+}
+.unpw p {
+	font-family: 'Josefin Slab', serif;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: rgb(255, 255, 255);
+}
 
 /*  _____________ menu _____________  */
 
@@ -337,34 +376,35 @@ h4 {
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	margin-left: 30%;
-	margin-top: 18%;
+	margin-left: 23%;
+	margin-top: 7%;
 }
 #how_top {
 	display:flex;
 	justify-content:center;
 	align-items:center;
     background-color: rgba(255, 255, 255,.8);
-    width: 250px;
+    width: 550px;
     height: 50px;
     border-radius: 50% / 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     position: absolute;
 	z-index:1;
+	margin-top: -30px;
 	margin-left: 25px;
 }
 #how_copy{
 	background-color: rgba(255, 255, 255,.8);
 	display:flex;
-	justify-content:center;
-	align-items:center;
-	width: 300px;
-	height: 300px;
+	/*justify-content:center;*/
+	/*align-items:center;*/
+	width: 600px;
+	height: 590px;
 	margin-left: 30%;
 	position: absolute;
 	z-index:4;
-	margin-top: 50px;
+	margin-top: 20px;
 	box-shadow: 0px 0px 12px 0px rgba(159, 0, 11, .3);
 }
 #how_bott {
@@ -372,41 +412,44 @@ h4 {
 	justify-content:center;
 	align-items:center;
     background-color: rgba(255, 255, 255,.8);
-    width: 250px;
+	width: 550px;
     height: 50px;
     border-radius: 50% / 100%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     position: absolute;
 	z-index:3;
-	margin-top: 350px;
+	margin-top: 610px;
 	margin-left: 25px;
+}
+#how_blurb {
+	padding: 20px 30px;
 }
 #how_left {
     border-radius: 10px 0px 0px 10px;
     width: 30px;
-    height: 280px; 
+    height: 550px; 
 	display:flex;
 	justify-content:center;
 	align-items:center;
     background-color: rgba(255, 255, 255,.8);
     position: absolute;
 	z-index:2;
-	margin-top: 60px;
+	margin-top: 40px;
 	margin-left: -30px;
 }
 #how_right {
     border-radius: 0px 10px 10px 0px;
     width: 30px;
-    height: 280px; 
+    height: 550px; 
 	display:flex;
 	justify-content:center;
 	align-items:center;
     background-color: rgba(255, 255, 255,.8);
     position: absolute;
 	z-index:2;
-	margin-top: 60px;
-	margin-left: 300px;
+	margin-top: 40px;
+	margin-left: 600px;
 }
 
 #wineform{
@@ -421,8 +464,8 @@ h4 {
 }
 
 #sommelier{
-	width: 90%;
-	margin: 5%;
+	width: 100%;
+	/*margin: 5%;*/
 }
 .form_box{
 	border: 2px white;
