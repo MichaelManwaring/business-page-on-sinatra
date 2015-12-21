@@ -65,6 +65,8 @@ $(".signin_butt").on("click", function() {
       $(".right_signin").delay(1000).animate({"right": '-=45%'}, 'slow');
       y = 0;
     }
+    
+}
   });
 });
 
@@ -77,6 +79,5 @@ $(".menu_lk").hover(function() {
     el.text(el.data("text-swap"));
   }
 });
-
 
 });
